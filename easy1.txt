@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char inputString[] = "Hello World";
+
+    int length = 0;                  
+    int i = strlen(inputString) - 1; 
+
+    
+    while (i >= 0 && inputString[i] == ' ') {
+        i--;  
+    }
+
+    
+    while (i >= 0 && inputString[i] != ' ') {
+        length++;  
+        i--;       
+    }
+
+    
+    printf("Length of the last word: %d\n", length);
+    return 0;
+}
